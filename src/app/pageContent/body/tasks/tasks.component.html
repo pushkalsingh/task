@@ -1,0 +1,20 @@
+@if(showDialogue) {
+    <app-add-task-form (setToHide)="showDialogueToAdd()" (addedTask)="addTask($event)"/>
+} 
+@else {
+    <div class="toCenter">
+        <div class="buttonToAdd">
+            <button (click)="showDialogueToAdd()">Add Task</button>
+        </div>
+        <div class="centerTaskList">
+            @for(task of tasks; track task.id) {
+                <app-single-task [task]="task" (isComplete)="changeTaskStatus($event)"/>
+            }
+        </div>
+    </div>
+}
+
+
+
+
+

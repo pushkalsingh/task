@@ -1,0 +1,29 @@
+<div class="backDrop"></div>
+<div class="boxOutside">
+    <dialog open class="dialogMainBox">
+        <div class="dialogBox">
+            <h2>Add Task</h2>
+        <form (ngSubmit)="onFormSubmit()">
+            <div class="inputBox">
+                Summary :
+                <textarea type="text" rows="4" cols="50" [(ngModel)]="shortDescription" name="shortDescription"></textarea>
+            </div>
+            <div class="inputBox textContent">
+                Descrip :
+                <textarea type="text" rows="4" cols="50" [(ngModel)]="description" name="description"></textarea>
+            </div>
+            <div class="inputBox textContent">
+                Due Date :
+                <input type="date" [(ngModel)]="dueDate" name="dueDate">
+            </div>
+            <div class="inputBox">
+                <div class="buttons">
+                    <button type="submit">Submit</button>
+                    <button type="button" (click)="changeToHide()">Cancel</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </dialog>
+</div>
+

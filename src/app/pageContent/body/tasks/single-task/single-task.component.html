@@ -1,0 +1,33 @@
+<div class="cardBox">
+    @if(task) {
+    <div class="centerBox">
+        <div class="innerBox">
+            <div class="upperBox">
+                <div class="heading">
+                    Summary: {{task.shortDecription}}
+                </div>
+                <div class="idNumber">
+                    Id: {{task.id}}
+                </div>
+                <div class="dateBox">
+                    Due: {{task.dueDate| date:'fullDate'}}
+                </div>
+            </div>
+            <div class="lowerBox">  
+                <div class="description">
+                    Description: {{task.longDescription}}
+                </div>
+                <div class="status">
+                    <button [class.active]="!task.completed" [class.inActive]="task.completed" (click)="changeStatus()">IsCompleted</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    }
+    @else {
+    <div class=centerBoxWithElse>
+        No Task Present
+    </div>
+    } 
+</div>

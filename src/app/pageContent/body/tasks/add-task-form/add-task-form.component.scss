@@ -1,0 +1,19 @@
+.boxOutside {
+    width: 100%;
+}
+
+.dialogMainBox {
+    width: 50%;
+    height: 60%;
+    margin: auto;
+    display: block;
+}
+
+.inputBox {
+    padding: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
